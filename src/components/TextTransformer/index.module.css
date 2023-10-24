@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  &:hover,
+  &:focus,
+  &:active,
+  &.focused {
+    .secondaryText {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .initialText {
+      transform: translateY(-60%);
+      opacity: 0;
+    }
+  }
+  /*&.centered {*/
+  /*  justify-content: center;*/
+  /*  align-items: center;*/
+  /*}*/
+}
+
+.textWrapper {
+  display: flex;
+  /*&.absolute {*/
+  /*  margin-top: -100%;*/
+  /*}*/
+}
+
+.textItem {
+  transition: all 0.4s;
+  margin: 0 1px;
+}
+
+.initialText {
+  position: relative;
+  opacity: 1;
+}
+
+.secondaryText {
+  transform: translateY(60%);
+  opacity: 0;
+}

@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--page-padding);
+  height: var(--navbar-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    .menuItem {
+      margin-left: 20px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      cursor: pointer;
+      &:hover {
+        color: #1890ff;
+      }
+    }
+  }
+}

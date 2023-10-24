@@ -1,0 +1,9 @@
+.wrapper {
+  padding: var(--navbar-height) var(--page-padding) var(--page-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.fullHeight {
+    min-height: calc(100vh - var(--navbar-height) - var(--page-padding));
+  }
+}
