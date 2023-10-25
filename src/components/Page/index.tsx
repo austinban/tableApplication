@@ -9,8 +9,8 @@ type OwnProps = {
   fullHeight?: boolean
 }
 
-const Header = ({ children, fullHeight }: OwnProps) => {
+const Page = ({ children, fullHeight }: OwnProps) => {
   return <div className={cx('wrapper', { fullHeight })}>{children}</div>
 }
 
-export default Header
+export default Page

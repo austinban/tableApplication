@@ -1,21 +1,23 @@
 import React from 'react'
-import Header from 'components/Header'
-import TextTransformer from 'components/TextTransformer'
+import Page from 'components/Page'
+import CoinList from 'components/CoinList'
+
+import { coinStore } from 'utils/store'
 import styles from './index.module.css'
 import classnames from 'classnames/bind'
+import Button from '../../components/Button'
 const cx = classnames.bind(styles)
 
 function App() {
   return (
-    <Header fullHeight>
-      <div className={cx('wrapper')}>
-        <TextTransformer
-          initialText="Hey there"
-          secondaryText="Let's learn how to make a great portfolio site"
-          centered
-        />
+    <Page fullHeight>
+      <div className={cx('header')}>
+        <h1>Coin Watch</h1>
+        <Button onClick={() => coinStore.fetchData()}>Refresh</Button>
       </div>
-    </Header>
+
+      <CoinList coinStore={coinStore} />
+    </Page>
   )
 }
 

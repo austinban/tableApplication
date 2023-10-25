@@ -1,0 +1,4 @@
+.wrapper {
+  padding: var(--page-padding);
+  min-height: calc(100vh - var(--page-padding) * 2);
+}

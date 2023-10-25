@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 1em 0;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  &.left {
+    justify-content: flex-start;
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+}
