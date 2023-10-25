@@ -3,6 +3,7 @@ import classnames from 'classnames/bind'
 const cx = classnames.bind(styles)
 
 export interface ColumnProps {
+  id: string
   content: string | React.ReactNode
   alignment?: 'left' | 'center' | 'right'
 }
@@ -14,9 +15,9 @@ export default function Row({ columns }: OwnProps) {
   return (
     <tr className={cx('row')}>
       {columns.map((column) => {
-        const { content, alignment } = column
+        const { content, alignment, id } = column
         return (
-          <td key={column.toString()}>
+          <td key={id}>
             <div className={cx('column', alignment)}>{content}</div>
           </td>
         )

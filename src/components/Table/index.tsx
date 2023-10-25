@@ -14,7 +14,7 @@ export default function Table({ rows, header }: OwnProps) {
       <HeaderComponent columns={header} />
       <tbody>
         {rows.map((row) => {
-          return <Row columns={row} />
+          return <Row key={row[0].id} columns={row} />
         })}
       </tbody>
     </table>

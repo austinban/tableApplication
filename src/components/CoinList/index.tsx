@@ -32,11 +32,6 @@ const CoinList = ({ coinStore }: OwnProps) => {
     [],
   )
 
-  const columns = [
-    { content: 'text' },
-    { content: <div>Here I am, a div</div> },
-  ]
-
   const getColumns = (): Array<ColumnProps[]> => {
     const coinData = coinStore.coinData?.coins
 
@@ -44,13 +39,14 @@ const CoinList = ({ coinStore }: OwnProps) => {
 
     return coinData.map((coin: CoinData) => {
       return [
-        { content: renderCoinName(coin) },
-        { content: renderPrice(coin), alignment: 'center' },
+        { id: coin.uuid, content: renderCoinName(coin) },
+        { id: coin.uuid, content: renderPrice(coin), alignment: 'center' },
         {
+          id: coin.uuid,
           content: Number(coin['24hVolume']).toLocaleString(),
           alignment: 'center',
         },
-        { content: renderChange(coin), alignment: 'right' },
+        { id: coin.uuid, content: renderChange(coin), alignment: 'right' },
       ]
     })
   }

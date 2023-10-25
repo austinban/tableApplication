@@ -3,7 +3,7 @@ import classnames from 'classnames/bind'
 const cx = classnames.bind(styles)
 
 export interface HeaderProps {
-  content: string | React.ReactNode
+  content: string
   alignment?: 'left' | 'center' | 'right'
 }
 
@@ -16,7 +16,7 @@ export default function Header({ columns }: OwnProps) {
     <thead>
       <tr className={cx('wrapper')}>
         {columns.map((c) => (
-          <th key={c?.toString()}>
+          <th key={c.content}>
             <div className={cx('column', c.alignment)}>{c.content}</div>
           </th>
         )) || null}
