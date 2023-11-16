@@ -1,6 +1,6 @@
 # Getting Started
 
-Hey there, Secoda team! Here's a little information on this app.
+Here's a little information on this app.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
