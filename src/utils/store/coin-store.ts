@@ -45,8 +45,7 @@ export class CoinStore {
         'https://api.coinranking.com/v2/coins?orderBy=price&scopeLimit=10&orderDirection=desc',
         {
           headers: {
-            'x-access-token':
-              'coinranking622378398a5f083b3f7a7a4ac6f22655ade885dc7e8fce81',
+            'x-access-token': process.env.REACT_APP_COIN_RANKING_KEY,
           },
         },
       )

@@ -55,6 +55,7 @@ const CoinList = ({ coinStore }: OwnProps) => {
     return (
       <div className={cx('name')}>
         <img
+          alt={coin.name}
           style={{ borderColor: coin.color }}
           className={cx('img')}
           src={coin.iconUrl}
